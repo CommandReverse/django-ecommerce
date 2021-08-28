@@ -1,4 +1,10 @@
 # dev
 .vim
+.venv
+.coverage
 *.sqlite3
 poetry.lock
+
+
+#thrash
+__pycache__/
