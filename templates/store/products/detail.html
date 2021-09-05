@@ -1,0 +1,12 @@
+{% extends "../base.html" %} {% block content %}
+{{ product.title }}
+{{ product.author }}
+{{ product.description }}
+{{ product.price }}
+<label for="select">Hoeveelheid</label>
+<select id="select">
+  <option value="">1</option>
+  <option value="">2</option>
+</select>
+<button>Voeg toe aan winkelmandje</button>
+{% endblock %}

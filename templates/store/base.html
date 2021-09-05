@@ -22,8 +22,7 @@
           <li class="show-mobile">
             <a href="">Categories</a>
             <ul>
-                <li><a class="" href="{% url "store:product_all"
-                        %}">All</a></li>
+                <li><a class="" href="{% url "store:all_products" %}">All</a></li>
                 {% for c in categories %}
                 <li {% if category.slug == c.slug %}class="selected" {% endif %}>
                     <a href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
@@ -40,7 +39,7 @@
     <div class="sidebar show-desktop">
       <h1>Categories</h1>
       <ul class="sidebar-item">
-        <li><a class="" href="{% url "store:product_all" %}">All</a></li>
+        <li><a class="" href="{% url "store:all_products" %}">All</a></li>
             {% for c in categories %}
             <li {% if category.slug == c.slug %}class="selected" {% endif %}>
                 <a href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
@@ -49,13 +48,7 @@
         </ul>
     </div>
     <main>
-      {% for message in get_flashed_messages() %}
-      <div>
-        {{ message }}
-      </div>
-      {% endfor %} {% block content %}{% endblock %} {% block scripts %}
-      {{ moment.include_moment() }}
-      {% endblock %}
+      {% block content %}{% endblock %}
     </main>
     <footer>
       <a class="links" href="https://www.instagram.com/_littleproductions">

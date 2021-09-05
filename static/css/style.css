@@ -2,37 +2,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
 
 :root {
-  --nav-desktop: linear-gradient(
-    45deg,
-    rgb(74, 53, 105),
-    rgb(40, 83, 109) 20%,
-    rgb(40, 83, 109) 80%,
-    rgb(74, 53, 105) 100%
-  );
-  --nav-mobile: linear-gradient(
-    90deg,
-    rgb(74, 53, 105),
-    rgb(40, 83, 109) 20%,
-    rgb(40, 83, 109) 80%,
-    rgb(74, 53, 105) 100%
-  );
-
+  --nav: rgb(250, 248, 246);
   --sidebar: rgb(40, 40, 40);
   --sauce: rgb(74, 53, 105);
   --sauce-hover: rgb(74, 0, 105);
   --title: rgb(245, 182, 196);
-  --text: rgb(245, 245, 245);
+  --text: rgb(245, 182, 196);
   --text-hover: rgb(0, 0, 0);
   --border: rgb(40, 40, 40);
   --background: rgba(0, 0, 0, 0.45);
   --foreground: rgba(245, 245, 245, 1);
-  --codeblock: rgba(245, 182, 196, 0.45);
+  --rainbow: linear-gradient(
+    90deg,
+    rgb(255, 209, 209),
+    rgb(251, 255, 222),
+    rgb(215, 253, 223),
+    rgb(224, 255, 253),
+    rgb(208, 208, 254),
+    rgb(249, 222, 255)
+  );
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* css for general looks */
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  background-image: var(--rainbow);
+  background-size: cover;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  background-image: var(--rainbow);
+  display: grid;
+}
+
+main {
+  background-image: var(--rainbow);
+  background-blend-mode: overlay;
+  background-size: cover;
 }
 
 /* css for mobile */
@@ -47,24 +66,7 @@
     display: flex;
   }
 
-  html,
-  body {
-    min-height: 100vh;
-    min-width: 100vw;
-    margin: 0;
-    background-image: url("bg.jpg");
-    background: var(--background);
-    background-blend-mode: multiply;
-    background-size: cover;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-  }
-
   .container {
-    padding: 0;
-    margin: 0;
-    background-color: var(--background);
-    display: grid;
     grid-template-areas:
       "header"
       "main"
@@ -75,10 +77,6 @@
   main {
     grid-area: main;
     grid-template-rows: auto;
-    background-image: url("bg.jpg");
-    background-color: var(--background);
-    background-blend-mode: overlay;
-    background-size: cover;
   }
 
   header {
@@ -380,14 +378,12 @@
   main {
     grid-area: main;
     grid-template-rows: auto;
-    background-image: url("bg.jpg");
-    background-color: var(--background);
-    background-blend-mode: overlay;
+    background-image: var(--rainbow);
     background-size: cover;
   }
 
   header {
-    background: var(--nav-desktop);
+    background: var(--nav);
     grid-area: header;
     display: grid;
     position: fixed;
@@ -398,7 +394,7 @@
   }
 
   footer {
-    background: var(--nav-desktop);
+    background: var(--nav);
     grid-area: footer;
     display: grid;
     grid-auto-rows: auto;
