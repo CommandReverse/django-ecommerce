@@ -6,12 +6,10 @@
   {% for product in products %}
   <div class="card">
     <img class="product-image" alt="Responsive Image" src="{{ product.image.url }}">
-    <h1 class="title">
-      <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
-    </h1>
-    <p class="price">€{{ product.price }}</p>
+    <a class="product-title" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+    <p class="product-price">€{{ product.price }}</p>
     <p class="product-information">{{ product.description }}</p>
-    <p><button class="card-button">Add to Cart</button></p>
+    <button class="card-button">ADD TO CART</button>
   </div>
   {% endfor %}
 </div>

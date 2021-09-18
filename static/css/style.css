@@ -41,7 +41,6 @@ body {
   margin: 0;
   background-size: cover;
   font-family: "Work Sans", sans-serif;
-  font-weight: 400;
 }
 
 .container {
@@ -111,63 +110,69 @@ footer .links {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 1;
-  place-items: center;
-  max-width: 300px;
-  max-height: 600px;
+  display: grid;
+  grid-template-areas:
+    "img . title"
+    "img . price"
+    "img . description"
+    "img . button";
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+  align-content: space-between;
+  max-width: 600px;
+  max-height: 300px;
   position: relative;
   margin: 1rem;
-  padding: 0;
-  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: pink;
   box-shadow: 0 4px 8px 0 var(--shadow);
 }
 
-.card * {
-  padding: 0;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-width: 0 16px 16px 0;
-  border-style: solid;
-  border-color: var(--card-before) var(--card-after);
-}
-
-.card .title a {
-  text-decoration: none;
+.product-title {
+  grid-area: title;
   color: black;
+  font-weight: 500;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
-.price {
+.product-price {
+  grid-area: price;
+  margin: 0;
+  padding: 0;
   color: var(--price);
   font-size: 1.5em;
+  font-weight: 600;
 }
 
 .product-image {
+  grid-area: img;
+  border-radius: 5px;
   width: 100%;
-  height: 360px;
+  height: 100%;
 }
 
 .product-information {
+  grid-area: description;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 0;
 }
 
 .card-button {
+  grid-area: button;
+  font-size: 1.1rem;
   border: none;
-  outline: 0;
-  padding: 12px;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
   color: white;
   background-color: black;
-  text-align: center;
   cursor: pointer;
-  width: 100%;
-  font-size: 1.3em;
 }
 
 .card-button:hover {
