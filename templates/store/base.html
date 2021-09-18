@@ -19,6 +19,7 @@
             <a href="">Home</a>
           </li>
           <li><a href="">About</a></li>
+<!--
           <li class="show-mobile">
             <a href="">Categories</a>
             <ul>
@@ -30,23 +31,13 @@
                 {% endfor %}
             </ul>
           </li>
+-->
         </ul>
       </nav>
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
       </label>
     </header>
-    <div class="sidebar show-desktop">
-      <h1>Categories</h1>
-      <ul class="sidebar-item">
-        <li><a class="" href="{% url "store:all_products" %}">All</a></li>
-            {% for c in categories %}
-            <li {% if category.slug == c.slug %}class="selected" {% endif %}>
-                <a href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
     <main>
       {% block content %}{% endblock %}
     </main>

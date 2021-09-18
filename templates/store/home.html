@@ -2,14 +2,17 @@
 {% load static %}
 {% block title %}Home{% endblock%}
 {% block content %}
-<section>
+ <div class="cardwrapper">
   {% for product in products %}
   <div class="card">
-    <img class="" alt="Responsive Image" src="{{ product.image.url }}" />
+    <img class="product-image" alt="Responsive Image" src="{{ product.image.url }}">
     <h1 class="title">
       <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
     </h1>
+    <p class="price">€{{ product.price }}</p>
+    <p class="product-information">{{ product.description }}</p>
+    <p><button class="card-button">Add to Cart</button></p>
   </div>
   {% endfor %}
-</section>
+</div>
 {% endblock %}
