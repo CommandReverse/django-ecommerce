@@ -1,0 +1,20 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Products{% endblock %}
+{% block content %}
+<div class="cardwrapper">
+  {% for product in products %}
+  <div class="card">
+    <img
+      class="product-image"
+      alt="Responsive Image"
+      src="{{ product.image.url }}"
+    />
+    <a class="product-title" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+    <p class="product-price">€{{ product.price }}</p>
+    <p class="product-information">{{ product.description }}</p>
+    <button class="card-button">ADD TO CART</button>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

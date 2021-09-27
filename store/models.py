@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True)
+    image = models.ImageField(upload_to='images/')
     slug = models.SlugField(max_length=255, unique=True)
 
     class Meta:

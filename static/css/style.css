@@ -1,29 +1,32 @@
+@font-face {
+  font-family: "Baiklah";
+  src: url("Baiklah.ttf");
+}
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
-@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
 
 :root {
-  --nav: rgb(0, 49, 83);
+  --nav: rgb(255, 255, 255);
   --navshade: rgb(204, 201, 197);
   --sidebar: rgb(40, 40, 40);
   --sauce: rgb(74, 53, 105);
   --sauce-hover: rgb(74, 0, 105);
-  --title: rgb(245, 182, 196);
-  --text: rgb(245, 182, 196);
+  --title: rgb(0, 0, 0);
+  --text: rgb(0, 0, 0);
   --text-hover: rgb(255, 255, 255);
   --border: rgb(40, 40, 40);
   --shadow: rgba(0, 0, 0, 0.25);
-  --card: rgb(255, 251, 246);
+  --card: rgb(255, 255, 255);
   --card-before: rgb(234, 192, 150);
   --card-after: rgb(215, 216, 217);
   --price: rgb(82, 83, 84);
   --rainbow: linear-gradient(
     90deg,
-    rgb(249, 230, 230),
-    rgb(249, 246, 230),
-    rgb(235, 249, 230),
-    rgb(230, 249, 241),
-    rgb(230, 241, 249),
-    rgb(249, 230, 246)
+    rgb(255, 100, 97),
+    rgb(254, 177, 99),
+    rgb(253, 253, 151),
+    rgb(158, 224, 158),
+    rgb(158, 193, 207),
+    rgb(204, 153, 201)
   );
 }
 
@@ -97,11 +100,11 @@ footer .links {
 /* setup of the page */
 .title {
   grid-area: comp;
-  font-family: "Style Script", cursive;
+  font-family: "Baiklah", cursive;
   text-decoration: none;
   color: var(--title);
   font-weight: 600;
-  font-size: 3.3rem;
+  font-size: 4.2rem;
   padding: 0;
   margin: 0;
 }
@@ -133,7 +136,7 @@ footer .links {
   margin: 0;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: pink;
+  background-color: var(--card);
   box-shadow: 0 4px 8px 0 var(--shadow);
 }
 
@@ -141,7 +144,7 @@ footer .links {
   grid-area: title;
   color: black;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 

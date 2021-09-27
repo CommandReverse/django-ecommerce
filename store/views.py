@@ -2,13 +2,18 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 
 def categories(request):
-    return {
-            'categories': Category.objects.all()
-            }
+    return {'categories': Category.objects.all()}
 
-def all_products(request):
+def home(request):
+    categories = Category.objects.all()
+    return render(request, 'store/home.html', {'categories': categories})
+
+def about(request):
+    return render(request, 'store/about.html')
+
+def products(request):
     products = Product.objects.all()
-    return render(request, 'store/home.html', {'products': products})
+    return render(request, 'store/products.html', {'products': products})
 
 def product_detail(request, slug):
    product = get_object_or_404(Product, slug=slug, in_stock=True) 
