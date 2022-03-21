@@ -3,6 +3,11 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 
 
+class ProductManager(models.Manager):
+    def get_queryset(self):
+        return super(ProductManager, self).get_queryset().filter(is_active=True)
+
+
 class Category(models.Model):
     name = models.CharField(max_length=255, db_index=True)
     image = models.ImageField(upload_to='images/')

@@ -2,9 +2,14 @@
 .vim
 .venv
 .coverage
-*.sqlite3
 poetry.lock
+
+# storage 
+*.sqlite3
+migrations/
+media/
 
 #thrash
 __pycache__/
-media/
+
+
