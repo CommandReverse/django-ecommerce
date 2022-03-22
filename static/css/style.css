@@ -109,6 +109,12 @@ footer .links {
   margin: 0;
 }
 
+.cart-logo {
+    height: 5vh;
+    width: auto;
+    border-radius: 25%;
+}
+
 .cardwrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -245,6 +251,12 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+nav ul li {
+    padding: none;
+    margin: none;
+    place-self: center;
 }
 
 nav a {
