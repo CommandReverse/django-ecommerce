@@ -20,7 +20,7 @@
             <li><a href="{% url 'store:product_all' %}">Products</a></li>
             <li><a href="/about">About</a></li>
             <li>
-                {% with total_qty=basket | length %}
+                {% with total_qty=basket|length %}
                 <div id="total_qty">
                 {% if total_qty > 0 %}
                     {{ total_qty }}
