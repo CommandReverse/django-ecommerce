@@ -2,6 +2,7 @@
 .vim
 .venv
 .coverage
+.env
 poetry.lock
 
 # storage 
