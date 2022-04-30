@@ -7,8 +7,8 @@ poetry.lock
 
 # storage 
 *.sqlite3
-migrations/
 media/
+migrations/
 
 #thrash
 __pycache__/
