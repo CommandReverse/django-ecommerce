@@ -146,6 +146,21 @@ footer .links {
   box-shadow: 0 4px 8px 0 var(--shadow);
 }
 
+.pager {
+  display: flex;
+  align-content: space-between;
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 300px;
+  max-height: 300px;
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--card);
+  box-shadow: 0 4px 8px 0 var(--shadow);
+}
+
 .product-title {
   grid-area: title;
   color: black;
