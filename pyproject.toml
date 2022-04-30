@@ -12,6 +12,7 @@ coverage = "^5.5"
 flake8 = "^3.9.2"
 isort = "^5.10.1"
 gunicorn = "^20.1.0"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
