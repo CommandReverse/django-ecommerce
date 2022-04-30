@@ -12,7 +12,7 @@
   --sauce-hover: rgb(74, 0, 105);
   --title: rgb(0, 0, 0);
   --text: rgb(0, 0, 0);
-  --text-hover: rgb(255, 255, 255);
+  --text-hover: rgb(105, 105, 105);
   --border: rgb(40, 40, 40);
   --shadow: rgba(0, 0, 0, 0.25);
   --card: rgb(255, 255, 255);
@@ -73,7 +73,8 @@ header {
 main {
   grid-area: main;
   background-image: var(--rainbow);
-  background-blend-mode: overlay;
+  background-blend-mo  --card: rgb(255, 255, 255);
+de: overlay;
   background-size: cover;
 }
 
@@ -118,7 +119,7 @@ footer .links {
 .cardwrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-flow: column;
+  grid-auto-flow: dense;
   place-items: center;
   gap: 1rem;
   padding: 1rem;
@@ -148,13 +149,9 @@ footer .links {
 
 .pager {
   display: flex;
-  align-content: space-between;
-  min-width: 600px;
-  max-width: 600px;
-  min-height: 300px;
-  max-height: 300px;
+  flex-direction: column;
   position: relative;
-  margin: 0;
+  margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: var(--card);
@@ -377,7 +374,7 @@ label {
     margin: 0;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: pink;
+    background-color: var(--card);
     box-shadow: 0 4px 8px 0 var(--shadow);
   }
 
@@ -430,7 +427,7 @@ label {
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
     display: block;
-    background: white;
+    background: black;
     height: 2px;
     width: 2em;
     border-radius: 2px;
@@ -492,7 +489,7 @@ label {
   }
 
   .cardwrapper {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
   }
   /* navigation bar design */
   .nav-toggle {
