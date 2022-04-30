@@ -16,9 +16,10 @@
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <nav>
         <ul>
-            <li><a href="{% url 'store:home' %}">Home</a></li>
-            <li><a href="{% url 'store:product_all' %}">Products</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="{% url 'store:home' %}">Thuis</a></li>
+            <li><a href="{% url 'store:product_all' %}">Producten</a></li>
+            <li><a href="/about">Over Ons</a></li>
+<!--            
             <li>
                 {% with total_qty=basket|length %}
                 <div id="total_qty">
@@ -33,6 +34,7 @@
                   <img class="cart-logo" src="{% static 'images/basket.png' %}">
                 </a>
             </li>
+-->
         </ul>
       </nav>
       <label for="nav-toggle" class="nav-toggle-label">
